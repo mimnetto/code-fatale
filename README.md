@@ -6,4 +6,6 @@
 * Molly Haughey
 * Lily Herreria
 
+First edit -MH
+
 https://trello.com/b/J8GjWSDb/code-fatale
