@@ -5,17 +5,35 @@ body {
   font-family: sans-serif;
 }
 
+/* header */
 header {
   margin: 5%;
+    margin-bottom: 0;
 }
 
 header h1 {
   font-family: bc-alphapipe, sans-serif;
   font-weight: 700;
   font-style: normal;
-  background: #ff2e63;
+  margin-bottom: 0;
+  text-align: center;
 }
 
+.top {
+  background: #ff2e63;
+  margin-right: 75%;
+  margin-left: 3%;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+/* main */
 main {
   margin: 5%;
+  background: #ff2e63;
+  height: 100%;
+  padding: 5%;
+  margin-top: 0;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
 }
