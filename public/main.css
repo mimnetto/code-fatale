@@ -1,14 +1,17 @@
-/* colors - #08d9d6 #252a34 #ff2e63  #eaeaea */
+/* colors - #402626 #252a34 #FF9999  #eaeaea #59B3A5 */
 @import url("https://use.typekit.net/cup7bbw.css");
 
 body {
   font-family: sans-serif;
+  height: 100%;
+  color: #252a34;
 }
 
 /* header */
 header {
-  margin: 5%;
-    margin-bottom: 0;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-bottom: 0;
 }
 
 header h1 {
@@ -19,9 +22,35 @@ header h1 {
   text-align: center;
 }
 
+header h5 {
+  font-family: bc-alphapipe, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  float: right;
+  margin-right: 4%;
+}
+
+a:link {
+  color: #402626;
+}
+
+a:visited {
+  color: #402626;
+}
+
+/* mouse over link */
+a:hover {
+  color: #402626;
+}
+
+/* selected link */
+a:active {
+  color: #402626;
+}
+
 .top {
-  background: #ff2e63;
-  margin-right: 75%;
+  background: #ff9999;
+  margin-right: 70%;
   margin-left: 3%;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
@@ -29,20 +58,65 @@ header h1 {
 
 /* main */
 main {
-  margin: 5%;
-  background: #ff2e63;
-  height: 100%;
+  background: #ff9999;
   padding: 5%;
+  margin-right: 5%;
+  margin-left: 5%;
   margin-top: 0;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
+  min-height: 100%;
+  margin-bottom: 0;
+  position: relative;
+  font-family: tgn-soft-round, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+img {
+  width: 200px;
+  display: block;
+  margin: 15px;
 }
 
 /* video */
-
 .container {
   position: relative;
   overflow: hidden;
   width: 100%;
   height: 100%;
+}
+
+/* some helpful classes*/
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* center a image*/
+p.centerpar {
+  text-align: center;
+}
+
+/* center a paragraph*/
+/* footer */
+footer {
+  background: #402626;
+  height: 100px;
+  position: relative;
+  ;
+  padding: 15px;
+  bottom: 0;
+  margin-right: 5%;
+  margin-left: 5%;
+  color: #eaeaea;
+  padding-top: 2%;
+  font-family: tgn-soft-round, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.made {
+  float: right;
 }
