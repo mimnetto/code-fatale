@@ -2,9 +2,9 @@
 //Dependencies
 //==========
   const express = require('express')
-  const blogs = express.Router()
   const Blog = require('../models/blogs.js')
-  const blogSeed = require('../models/seed.js')
+  const blogs = express.Router()
+  // const blogSeed = require('../models/blog_seed.js')
 
 //==========
 //GET Route
@@ -13,15 +13,6 @@
   blogs.get('/', (req, res) => {
     Blog.find({}, (err, foundBlogs) => {
       res.json(foundBlogs)
-    })
-  })
-
-//==========
-//SEED Route
-//==========
-  blogs.get('/seed', (req, res) => {
-    Blog.insertMany(blogSeed, (err, manyBlogs) => {
-      res.redirect('/')
     })
   })
 
@@ -71,11 +62,21 @@
     })
 
 //==========
+//SEED Route
+//==========
+// blogs.get('/seed', (req, res) => {
+//   Blog.insertMany(blogSeed, (err, manyBlogs) => {
+//     res.redirect('/')
+//   })
+// })
+
+//==========
 //DROP Collection
 //==========
-    blogs.get('/dropcollection', (req, res) => {
-      Blog.collection.drop()
-      res.redirect('/')
-    })
+    // blogs.get('/dropcollection', (req, res) => {
+    //   Blog.collection.drop()
+    //   res.redirect('/')
+    // })
 
-  module.exports = blogs
+
+module.exports = blogs
