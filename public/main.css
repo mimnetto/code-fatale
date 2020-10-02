@@ -1,0 +1,21 @@
+/* colors - #08d9d6 #252a34 #ff2e63  #eaeaea */
+@import url("https://use.typekit.net/cup7bbw.css");
+
+body {
+  font-family: sans-serif;
+}
+
+header {
+  margin: 5%;
+}
+
+header h1 {
+  font-family: bc-alphapipe, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  background: #ff2e63;
+}
+
+main {
+  margin: 5%;
+}
