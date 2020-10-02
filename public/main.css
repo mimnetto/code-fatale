@@ -37,3 +37,12 @@ main {
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
 }
+
+/* video */
+
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
