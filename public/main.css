@@ -40,7 +40,7 @@ a:visited {
 
 /* mouse over link */
 a:hover {
-  color: #402626;
+  color: #59B3A5;
 }
 
 /* selected link */
@@ -73,10 +73,20 @@ main {
   font-style: normal;
 }
 
-img {
+img.lefti {
   width: 200px;
   display: block;
   margin: 15px;
+  padding-left: 0;
+  margin: 0;
+  float: right;
+}
+
+img {
+  max-width: 200px;
+  display: block;
+  margin: 15px;
+  padding-left: 0;
 }
 
 /* video */
@@ -99,13 +109,23 @@ p.centerpar {
   text-align: center;
 }
 
-/* center a paragraph*/
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
 /* footer */
 footer {
   background: #402626;
   height: 100px;
   position: relative;
-  ;
   padding: 15px;
   bottom: 0;
   margin-right: 5%;
@@ -120,3 +140,55 @@ footer {
 .made {
   float: right;
 }
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+li {
+  justify-content: space-between;
+  width: 95%;
+  margin: 2%;
+  background: #eaeaeaa8;
+  box-sizing: border-box;
+  padding: 2%;
+  border-radius: 15px;
+}
+
+.title {
+  font-family: bc-alphapipe, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0;
+  padding-left: 15px;
+}
+
+details.view {
+  display: block;
+  width: 75%;
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+p.view {
+  text-transform: capitalize;
+}
+
+/* form */
+label {
+  font-size: 1rem !important;
+  margin-top: 5px !important;
+  color: #402626 !important;
+  text-transform: uppercase;
+  line-height: 2rem;
+}
+
+/* button {
+    text-align: center;
+    margin-right: auto;
+    position: fixed;
+    background-color: #59B3A5;
+    border-radius: 5px;
+  } */
