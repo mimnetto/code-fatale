@@ -16,7 +16,6 @@
     })
   })
 
-
 //==========
 //POST Route
 //==========
@@ -80,4 +79,4 @@
     // })
 
 
-  module.exports = blogs
+module.exports = blogs
