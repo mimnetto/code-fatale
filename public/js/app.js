@@ -1,4 +1,3 @@
-ReactDOM.render(<App />, document.querySelector("main"));
 class App extends React.Component {
   state = {
   title: '',
@@ -7,7 +6,6 @@ class App extends React.Component {
   img:'',
   blogs:[]
 }
-
 componentDidMount = () => {
   axios.get('/blogs').then(response => {
     this.setState({
@@ -18,7 +16,6 @@ componentDidMount = () => {
 handleChange = event => {
   this.setState({ [event.target.id]: event.target.value})
 }
-
 handleSubmit = event => {
   event.preventDefault()
   axios
@@ -30,7 +27,6 @@ handleSubmit = event => {
     })
   )
 }
-
 deleteBlog = event => {
   axios.delete('/blogs/' + event.target.value).then(response => {
     this.setState({
@@ -38,7 +34,6 @@ deleteBlog = event => {
     })
   })
 }
-
 updateBlog = (event) => {
   event.preventDefault()
   const id = event.target.id
@@ -51,7 +46,6 @@ updateBlog = (event) => {
       })
     })
 }
-
   render = () => {
     return (
       <div>
@@ -73,13 +67,7 @@ updateBlog = (event) => {
             <input type="submit" value="Create Blog" />
           </form>
           </details>
-      <section>
-        <div className="container">
-            <iframe width="677" height="381" src="https://www.youtube.com/embed/zmPzbZVUp3g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-      </section>
           <h2>List of Blogs</h2>
-
           <ul>
             {this.state.blogs.map(blog => { return (
             <li key={blog._id}>
@@ -134,7 +122,6 @@ updateBlog = (event) => {
                      onClick= {this.deleteBlog}
                      >This is a bad blog
                      </button>
-
                 </details>
             </li>
           )})}
