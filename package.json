@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/mimnetto/code-fatale#readme",
   "dependencies": {
+    "cores": "^0.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "method-override": "^3.0.0",
