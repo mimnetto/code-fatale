@@ -3,8 +3,8 @@
 //==========
   const express = require('express')
   const blogs = express.Router()
-  const Blog = require('../models/blog.js')
-  const blogSeed = require('../models/blog_seed.js')
+  const Blog = require('../models/blogs.js')
+  const blogSeed = require('../models/seed.js')
 
 //==========
 //GET Route
