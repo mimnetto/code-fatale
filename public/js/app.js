@@ -7,7 +7,9 @@ class App extends React.Component {
   blogs:[]
 }
 componentDidMount = () => {
-  axios.get('/blogs').then(response => {
+  axios
+  .get('/blogs')
+  .then(response => {
     this.setState({
       blogs: response.data
     })
@@ -28,7 +30,8 @@ handleSubmit = event => {
   )
 }
 deleteBlog = event => {
-  axios.delete('/blogs/' + event.target.value).then(response => {
+  axios.delete('/blogs/' + event.target.value)
+  .then(response => {
     this.setState({
       blogs: response.data
     })
@@ -132,4 +135,6 @@ updateBlog = (event) => {
 }
 
 ReactDOM.render(
-  <App />, document.querySelector('main'))
+  <App></App>,
+  document.querySelector('main')
+)
