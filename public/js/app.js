@@ -1,3 +1,4 @@
+ReactDOM.render(<App />, document.querySelector("main"));
 class App extends React.Component {
   state = {
   title: '',
@@ -72,6 +73,11 @@ updateBlog = (event) => {
             <input type="submit" value="Create Blog" />
           </form>
           </details>
+      <section>
+        <div className="container">
+            <iframe width="677" height="381" src="https://www.youtube.com/embed/zmPzbZVUp3g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+      </section>
           <h2>List of Blogs</h2>
 
           <ul>
