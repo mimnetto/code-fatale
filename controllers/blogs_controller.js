@@ -1,3 +1,12 @@
+const isAuthenticated = (req, res, next) => {
+    if (req.session.currentUser) {
+      return next()
+    } else {
+      res.redirect('/sessions/new')
+    }
+  }
+
+
 //==========
 //Dependencies
 //==========
@@ -5,6 +14,7 @@
   const Blog = require('../models/blogs.js')
   const blogs = express.Router()
   // const blogSeed = require('../models/blog_seed.js')
+ 
 
 //==========
 //GET Route
@@ -60,6 +70,26 @@
         })
       })
     })
+
+//==========
+//Sessions
+//==========
+// blogs.get('/sessions', (req, res) => {
+//     //any route will work
+//     if (req.session.anyProperty === 'hello world') {
+//         console.log('it matches! cool')
+//     } else {
+//         //do something else if it's not
+//         console.log('nope, not a match')
+//       }
+//       res.redirect('/')
+//   })
+
+//   app.get('/update', (req, res) => {
+//     //any route will work
+//     req.session.anyProperty = 'hello world'
+//     res.redirect('/')
+//   })
 
 //==========
 //SEED Route

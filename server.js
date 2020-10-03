@@ -4,7 +4,9 @@
 const express = require('express');
 const mongoose = require ('mongoose');
 const methodOverride  = require('method-override');
-
+const session = require('express-session')
+const bcrypt = require('bcrypt')
+const hashedString = bcrypt.hashSync('yourStringHere', bcrypt.genSaltSync(10))
 
 //___________________
 //Config
@@ -52,9 +54,20 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 //use method override
 app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
+app.use(
+  session({
+    secret: process.env.SECRET, //a random string
+    resave: false,
+    saveUninitialized: false 
+  })
+)
 //ROUTES
 const blogsController = require("./controllers/blogs_controller.js");
 app.use("/blogs", blogsController);
+const usersController = require('./controllers/users_controller.js')
+app.use('/users', usersController)
+const sessionsController = require('./controllers/sessions_controller.js')
+app.use('/sessions', sessionsController)
 
 
 //___________________
