@@ -103,6 +103,8 @@ li {
   box-sizing: border-box;
   padding: 2%;
   border-radius: 15px;
+  box-shadow: 5px 10px #402626;
+  border: #402626 solid;
 }
 
 .title {
