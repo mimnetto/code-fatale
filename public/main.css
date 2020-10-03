@@ -14,12 +14,21 @@ header {
   margin-bottom: 0;
 }
 
-header h1 {
+header h2 {
   font-family: bc-alphapipe, sans-serif;
   font-weight: 700;
   font-style: normal;
   margin-bottom: 0;
   text-align: center;
+}
+
+header h6 {
+  font-family: bc-alphapipe, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  margin-bottom: 0;
+  text-align: center;
+  margin-top: 5px;
 }
 
 header h5 {
