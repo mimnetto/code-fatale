@@ -45,6 +45,7 @@ header h5 {
   margin-left: 3%;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
+  box-shadow: 5px -5px #402626;
 }
 
 /* main */
@@ -62,6 +63,8 @@ main {
   font-family: tgn-soft-round, sans-serif;
   font-weight: 400;
   font-style: normal;
+  box-shadow: 5px -5px #402626;
+  z-index: -1;
 }
 
 img.lefti {
@@ -146,7 +149,7 @@ a:visited {
 
 /* mouse over link */
 a:hover {
-  color: #FF9999;
+  color: #e85252;
 }
 
 /* selected link */
@@ -154,9 +157,9 @@ a:active {
   color: #402626;
 }
 
-  /* effect-shine */
+/* effect-shine */
 a.effect-shine:hover {
-  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);
   -webkit-mask-size: 200%;
   animation: shine 2s infinite;
 }
@@ -165,6 +168,7 @@ a.effect-shine:hover {
   from {
     -webkit-mask-position: 150%;
   }
+
   to {
     -webkit-mask-position: -50%;
   }
