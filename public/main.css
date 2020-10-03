@@ -45,7 +45,7 @@ header h5 {
   margin-left: 3%;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
-  box-shadow: 5px -5px #402626;
+  box-shadow: 20px 20px #402626;
 }
 
 /* main */
@@ -63,8 +63,7 @@ main {
   font-family: tgn-soft-round, sans-serif;
   font-weight: 400;
   font-style: normal;
-  box-shadow: 5px -5px #402626;
-  z-index: -1;
+  box-shadow: 20px 20px #402626;
 }
 
 img.lefti {
@@ -188,6 +187,7 @@ footer {
   font-family: tgn-soft-round, sans-serif;
   font-weight: 700;
   font-style: normal;
+  box-shadow: 20px 0px #fb9999;
 }
 
 .made {
