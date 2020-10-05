@@ -128,10 +128,74 @@ updateBlog = (event) => {
             </li>
           )})}
           </ul>
+          <Profile username={this.state.profile.Username}></Profile>
         </div>
     )
   }
 }
+
+//Profile component in React ============================
+
+class Profiles extends React.Component {
+  state = {
+    username: '',
+    profiles: []
+  }
+  componentDidMount = () => {
+    axios.get('/blogs').then(response => {
+      this.setState({
+        profiles: response.data
+      })
+    })
+  }
+  handleChange = event => {
+    this.setState({ [event.target.id]: event.target.value})
+  }
+
+  handleSubmit = event => {
+    event.preventDefault()
+    axios
+    .post('/profiles', this.state)
+    .then(response =>
+      this.setState(
+      { username: '',
+        profiles: response.data
+      })
+    )
+  }
+  deleteProfile = event => {
+    axios.delete('/profiles/' + event.target.value).then(response => {
+      this.setState({
+        profiles: response.data
+      })
+    })
+  }
+  updateProfile = (event) => {
+    event.prevnetDefault()
+    const id = event.target.id
+    axios
+      .put('/blogs/' + id, this.state)
+      .then(response => {
+        this.setState({
+          profiles: response.data,
+          username: '',
+        })
+      })
+  }
+  render = () => {
+    return (
+      <div>
+        <details>
+          <summary>Create User Profile</summary>
+        <form onSubmit={this.handleSubmit}>
+          <label htmlFor="username">Username:</label>
+          <input type="text" id="title" onChange={this.handleChange}/>
+          <input type="submit" value="create profile user" />
+        </form>
+        </details>
+      }
+      </div>
+
 
 ReactDOM.render(
   <App></App>,
