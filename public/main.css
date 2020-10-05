@@ -18,8 +18,11 @@ header h2 {
   font-family: bc-alphapipe, sans-serif;
   font-weight: 700;
   font-style: normal;
+  font-size: 5vw;
   margin-bottom: 0;
   text-align: center;
+  font-size: 5vw;
+  padding-top: 10px;
 }
 
 header h6 {
@@ -29,6 +32,8 @@ header h6 {
   margin-bottom: 0;
   text-align: center;
   margin-top: 5px;
+  font-size: 1.5vw;
+  padding-bottom: 10px;
 }
 
 header h5 {
@@ -36,12 +41,14 @@ header h5 {
   font-weight: 700;
   font-style: normal;
   float: right;
-  margin-right: 4%;
+  margin-right: 10%;
+  margin-top: 40px;
+  font-size: 2.5vw;
 }
 
 .top {
   background: #ff9999;
-  margin-right: 70%;
+  margin-right: 65%;
   margin-left: 3%;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
@@ -52,11 +59,11 @@ header h5 {
 main {
   background: #ff9999;
   padding: 5%;
-  margin-right: 5%;
+  margin-right: 10%;
   margin-left: 5%;
   margin-top: 0;
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
   min-height: 100%;
   margin-bottom: 0;
   position: relative;
@@ -66,6 +73,16 @@ main {
   box-shadow: 20px 20px #402626;
 }
 
+h2.recent {
+  font-family: bc-alphapipe, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 5vw;
+  margin-bottom: 0;
+  font-size: 4vw;
+  padding-top: 15px;
+}
+
 img.lefti {
   width: 200px;
   display: block;
@@ -73,6 +90,7 @@ img.lefti {
   padding-left: 0;
   margin: 0;
   float: right;
+  border-radius: 4px;
 }
 
 img {
@@ -180,7 +198,7 @@ footer {
   position: relative;
   padding: 15px;
   bottom: 0;
-  margin-right: 5%;
+  margin-right: 10%;
   margin-left: 5%;
   color: #eaeaea;
   padding-top: 2%;
