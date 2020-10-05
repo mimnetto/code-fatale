@@ -5,6 +5,7 @@ const blogSchema = new mongoose.Schema({
   post: String,
   mood: String,
   img: String ,
+  createdAt: { type: Date, default: Date.now },
 }, {timestamps: true});
 
 const Blog = mongoose.model("Blog", blogSchema);
