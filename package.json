@@ -18,8 +18,7 @@
   },
   "homepage": "https://github.com/mimnetto/code-fatale#readme",
   "dependencies": {
-    "babel": "^6.23.0",
-    "bcrypt": "^5.0.0",
+    "@fortawesome/fontawesome-free": "^5.15.0",
     "cores": "^0.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",

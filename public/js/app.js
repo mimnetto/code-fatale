@@ -27,7 +27,11 @@ handleSubmit = event => {
   .post('/blogs', this.state)
   .then(response =>
     this.setState(
-    { title: '',
+    {
+      title: '',
+      post: '',
+      mood: '',
+      img:'',
       blogs: response.data
     })
   )
@@ -77,17 +81,12 @@ updateBlog = (event) => {
           <ul>
             {this.state.blogs.map(blog => { return (
             <li key={blog._id}>
-            Title:
-              {blog.title} <br />
-              <img src={blog.img} alt={blog.title}/><br />
-               <details>
+            <h5 className="title">{blog.title}</h5>
+            <img className="lefti" src={blog.img} alt={blog.title}/>
+               <details className="view">
                   <summary>More info</summary>
-                  title: {blog.title}<br />
-                  post: {blog.post}<br />
-                  mood: {blog.mood}<br />
-                  img: {blog.img}<br />
-                  <br />
-                  <br />
+                  <p className="view">mood: {blog.mood}</p>
+                  <p className="view">post: {blog.post}</p>
                   <details>
                   <summary>Edit info</summary>
                   <form id= {blog._id} onSubmit= {this.updateBlog}>
