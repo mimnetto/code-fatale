@@ -14,6 +14,7 @@
     Blog.find({}, (err, foundBlogs) => {
       res.json(foundBlogs)
     })
+    .sort({ _id: -1 }) // sorts by most recent
   })
 
 //==========
@@ -25,6 +26,7 @@
       Blog.find({}, (err, foundBlogs) => {
         res.json(foundBlogs)
       })
+      .sort({ _id: -1 }) // sorts by most recent
     })
   })
 
@@ -44,6 +46,7 @@
             Blog.find({}, (err, foundBlogs) => {
           res.json(foundBlogs)
         })
+        .sort({ _id: -1 }) // sorts by most recent
       }
     }
   )
@@ -58,6 +61,7 @@
         Blog.find({}, (err, foundBlogs) => {
           res.json(foundBlogs)
         })
+        .sort({ _id: -1 }) // sorts by most recent
       })
     })
 
