@@ -4,8 +4,7 @@ const blogSchema = new mongoose.Schema({
   title: String,
   post: String,
   mood: String,
-
-  img: String,
+  img: String ,
 }, {timestamps: true});
 
 const Blog = mongoose.model("Blog", blogSchema);

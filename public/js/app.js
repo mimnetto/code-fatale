@@ -129,7 +129,7 @@ updateProfile = (event) => {
             <input type="submit" value="Create Blog" />
           </form>
           </details>
-          <h2>List of Blogs</h2>
+          <h2 className="recent">Most Recent Posts Blogs</h2>
           <ul>
             {this.state.blogs.map(blog => { return (
             <li key={blog._id}>
@@ -163,7 +163,6 @@ updateProfile = (event) => {
                       onChange={this.handleChange}
                       value={this.state.name}
                     /> <br />
-
                     <label htmlFor="mood">mood:</label>
                     <input
                       type="text"
