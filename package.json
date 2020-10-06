@@ -25,6 +25,11 @@
     "cores": "^0.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "materialize-css": "^1.0.0-rc.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.10.7",
+    "react-modal": "^3.11.2",
+    "simple-react-modal": "^0.5.1"
     "express-session": "^1.17.1",
     "method-override": "^3.0.0",
     "mongoose": "^5.10.7",
