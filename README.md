@@ -17,7 +17,7 @@
 
 ### Heroku
 
-* [Heroku} (https://ifatale.herokuapp.com/)
+* [Heroku] (https://ifatale.herokuapp.com/)
 
 ### Communication
 
