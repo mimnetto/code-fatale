@@ -11,7 +11,7 @@
 
 ### Links 
 
-https://trello.com/b/J8GjWSDb/code-fatale
+[trello](https://trello.com/b/J8GjWSDb/code-fatale)
 
 ![ga](/public/img/gaLogo.png) <br>
 For General Assembly SEIR 810 Moss!
