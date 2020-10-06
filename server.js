@@ -26,6 +26,7 @@ mongoose.connect(MONGODB_URI, {
   useUnifiedTopology: true,
   useFindAndModify: false,
 });
+
 // Error / success
 mongoose.connection.on("error", (err) =>
   console.log(
@@ -38,6 +39,16 @@ mongoose.connection.on("connected", () =>
 );
 mongoose.connection.on("disconnected", () => console.log("mongo disconnected"));
 
+mongoose.set('useNewUrlParser',true);
+mongoose.set('useCreateIndex',true);
+mongoose.connect(MONGODB_URI)
+.then(connection => {
+  console.log('Connected to MongoDB DB')
+})
+.catch(error => {
+console.log(error.message)
+})
+
 //___________________
 //Middleware
 //___________________
@@ -45,20 +56,25 @@ mongoose.connection.on("disconnected", () => console.log("mongo disconnected"));
 //use public folder for static assets
 app.use(express.static('public'));
 
+
 // populates req.body with parsed info from forms - if no data from forms will return an empty object {}
 app.use(express.urlencoded({ extended: true }));// extended: false - does not allow nested objects in query strings
+
+// SECRET
+app.use(
+  session({
+    secret: process.env.SECRET, //a random string do not copy this value or your stuff will get hacked
+    resave: false, // default more info: https://www.npmjs.com/package/express-session#resave
+    saveUninitialized: false // default  more info: https://www.npmjs.com/package/express-session#resave
+  })
+)
+
 app.use(express.json());// returns middleware that only parses JSON - may or may not need it depending on your project
 
 
 //use method override
 app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
-app.use(
-  session({
-    secret: process.env.SECRET,
-    resave: false,
-    saveUninitialized: false})
-)
 //ROUTES
 const blogsController = require("./controllers/blogs_controller.js");
 app.use("/blogs", blogsController);
