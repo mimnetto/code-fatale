@@ -104,6 +104,10 @@ summary {
   outline: none;
 }
 
+summary::marker {
+  background-color: #59B3A5;
+}
+
 /* video */
 .container {
   position: relative;
@@ -139,15 +143,30 @@ li {
   padding-left: 15px;
 }
 
-details.view {
-  display: block;
+div.view {
   width: 75%;
   margin-top: 10px;
   padding-left: 20px;
+  font-family: tgn-soft-round, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  display: inline-block;
 }
 
-p.view {
+h6.view {
   text-transform: capitalize;
+  font-weight: 900;
+  background: #59B3A5;
+  min-width: 100px;
+  display: inline-block;
+  padding: 5px;
+  text-align: center;
+  vertical-align: text-top;
+}
+
+p.feels {
+  text-transform: capitalize;
+  text-align: left;
 }
 
 /* form */
@@ -172,7 +191,6 @@ a:visited {
 a:hover {
   color: #eaeaea;
   font-weight: 900;
-
 }
 
 /* selected link */
@@ -181,12 +199,11 @@ a:active {
 }
 
 /* effect-shine */
-
 a.effect-shine:hover {
-  color: red;
+  color: darkred;
   font-weight: 900;
-
 }
+
 a.effect-shine:hover {
   -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);
   -webkit-mask-size: 200%;
@@ -252,24 +269,24 @@ p.centerpar {
   position: fixed;
   top: 15%;
   left: 0;
-  width:100%;
+  width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
   border: 5px #59B3A5 solid;
   border-radius: 25px;
-    z-index: 1;
+  z-index: 1;
 }
 
 .modal-main {
-  position:fixed;
+  position: fixed;
   background: white;
   border: 5px #59B3A5 solid;
   width: 80%;
   border-radius: 25px;
   height: auto;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .display-block {
@@ -294,4 +311,43 @@ button {
 
 .vibes-btn {
   width: 100%
+}
+
+input.update-btn {
+  background-color: #59B3A5 !important;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+form.edit-sum {
+  margin-bottom: 35px;
+  width: 100%;
+}
+
+summary {
+  font-family: tgn-soft-round, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+summary::-webkit-details-marker {
+  color: #59B3A5;
+}
+
+tr {
+  border-bottom: none !important;
+  padding: 0 !important;
+}
+
+td {
+  padding: 0 !important;
+}
+
+td.feel {
+  width: 150px;
+  vertical-align: text-top;
+}
+
+table {
+  margin-bottom: 25px;
 }

@@ -1,21 +1,21 @@
 class App extends React.Component {
-  state = {
-  title: '',
-  post: '',
-  mood: '',
-  img:'',
-  createdAt:'',
-  blogs:[]
-}
-componentDidMount = () => {
-  axios
-  .get('/blogs')
-  .then(response => {
-    this.setState({
-      blogs: response.data
-    })
-  })
-}
+    state = {
+      title: '',
+      post: '',
+      mood: '',
+      img:'',
+      createdAt:'',
+      blogs:[]
+    }
+  componentDidMount = () => {
+      axios
+      .get('/blogs')
+      .then(response => {
+        this.setState({
+          blogs: response.data
+        })
+      })
+    }
 handleChange = event => {
   this.setState({ [event.target.id]: event.target.value})
 }
@@ -76,15 +76,31 @@ updateBlog = (event) => {
             {this.state.blogs.map(blog => { return (
             <li key={blog._id}>
             <h5 className="title">{blog.title}</h5>
+            <a href={blog.img} target="_blank">
             <img className="lefti" src={blog.img} alt={blog.title}/>
-               <details className="view">
-                  <summary>More info</summary>
-                  <p className="view">mood: {blog.mood}</p>
-                  <p className="view">post: {blog.post}</p>
-                  <p className="view">Posted: {(new Date(blog.createdAt)).toLocaleString()}</p>
+            </a>
+               <div className="view">
+                  <summary>Read Post</summary>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td className="feel"><h6 className="view"> <i className="tiny material-icons">mood</i> mood</h6></td>
+                        <td><p className="feels">{blog.mood}</p> </td>
+                      </tr>
+                      <tr>
+                        <td className="feel"><h6 className="view"> <i className="tiny material-icons">mode_comment</i> post</h6></td>
+                        <td><p className="feels"> {blog.post} </p></td>
+                      </tr>
+                      <tr>
+                        <td className="feel"><h6 className="view"> <i className="tiny material-icons">schedule</i> posted</h6></td>
+                        <td><p className="feels"> {(new Date(blog.createdAt)).toLocaleString()} </p></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
                   <details>
-                  <summary>Edit info</summary>
-                  <form id= {blog._id} onSubmit= {this.updateBlog}>
+                  <summary>Edit Post</summary>
+                  <form id= {blog._id} onSubmit= {this.updateBlog}  className="edit-sum">
                     <label htmlFor="title">title:</label>
                     <input
                       type="text"
@@ -113,7 +129,7 @@ updateBlog = (event) => {
                       onChange={this.handleChange}
                       value={this.state.name}
                     /> <br />
-                    <input type="submit" value="Update Blog" />
+                    <input className="update-btn right" type="submit" value="Update Blog" />
                     </form>
                     </details> <br />
                     <button
@@ -121,7 +137,6 @@ updateBlog = (event) => {
                      onClick= {this.deleteBlog}
                      >This is a bad blog
                      </button>
-                </details>
             </li>
           )})}
           </ul>
@@ -135,7 +150,6 @@ const display = {
 const hide = {
   display: 'none'
 };
-
 class Modal extends React.Component {
   constructor(props) {
     super(props);
@@ -174,15 +188,15 @@ class Modal extends React.Component {
           <input placeholder="Post Title" type="text" id="title" onChange={this.handleChange}/>
           <br />
           <div className="input-field">
-          <i class="material-icons prefix">create</i>
+          <i className="material-icons prefix">create</i>
           <label htmlFor="post">Your Post </label>
           <textarea type="text" id="post" onChange={this.handleChange} className="materialize-textarea"></textarea>
           </div>
           <br />
-          <label htmlFor="mood">Mood: </label>
+          <label htmlFor="mood">Mood </label>
           <input placeholder="What's your mood" type="text" id="mood" onChange={this.handleChange}/>
           <br />
-          <label htmlFor="img">Image: </label>
+          <label htmlFor="img">Image </label>
           <input placeholder="http://" type="text" id="img" onChange={this.handleChange}/>
           <br />
           <input type="submit" onClick={this.toggle} value="Post!" />
@@ -203,3 +217,5 @@ ReactDOM.render(
   <App></App>,
   document.querySelector('main')
 )
+
+//ReactDOM.render(<Modal></Modal>, document.getElementById('post-it'));
