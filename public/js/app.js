@@ -71,7 +71,7 @@ updateBlog = (event) => {
     return (
       <div>
           <Modal updateBlogs={this.updateBlogs} />
-          <h2 className="recent">Most Recent Posts Blogs</h2>
+          <h2 className="recent">Most Recent Blogs Posts </h2>
           <ul>
             {this.state.blogs.map(blog => { return (
             <li key={blog._id}>
@@ -108,10 +108,10 @@ updateBlog = (event) => {
                     <textarea type="text" id="post" onChange={this.handleChange} value={this.state.name} className="materialize-textarea">New Post</textarea> <br />
                     <label htmlFor="img">image</label>
                     <input type="text" id="img" onChange={this.handleChange} value={this.state.name} placeholder="http://new-image.jpg" /> <br />
-                    <input className="update-btn right" type="submit" value="Update Blog" />
+                    <input className="update-btn left" type="submit" value="Update Blog" />
                     </form>
                     </details> <br />
-                    <button value= {blog._id} onClick= {this.deleteBlog}> This is a bad </button>
+                    <button value= {blog._id} onClick= {this.deleteBlog} className="right"> Bad Post! </button>
             </li>
           )})}
           </ul>
@@ -155,7 +155,7 @@ class Modal extends React.Component {
       <div className="modal" style={this.state.toggle ? display : hide}>
       <div className="modal-content">
       <div className="modal-header">
-        <a className="btn-flat right" onClick={this.toggle}>X Cancel</a>
+        <a className="btn-flat right" onClick={this.toggle}><h1>X</h1></a>
       </div>
         <h4 className="vibes">Post some good vibes!</h4>
         <form onSubmit={this.handleSubmit}>
@@ -176,7 +176,6 @@ class Modal extends React.Component {
           <br />
           <input type="submit" className="post-btn right" onClick={this.toggle} value="Post!" />
         </form>
-        <button onClick={this.toggle} className="left">Cancel</button>
       </div>
     </div>
     );
