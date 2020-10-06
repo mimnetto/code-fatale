@@ -4,8 +4,11 @@ class App extends React.Component {
   post: '',
   mood: '',
   img:'',
-  blogs:[]
+  blogs:[],
+
+  profiles:[]
 }
+//Blogs did mount
 componentDidMount = () => {
   axios
   .get('/blogs')
@@ -15,9 +18,23 @@ componentDidMount = () => {
     })
   })
 }
+//Profiles did mount
+componentDidMount = () => {
+  axios.get('/profiles')
+    .then(response => response.json())
+    .then(data =>
+  this.setState({
+      profiles: data
+    }))
+  }
+
+
+//Blogs and  Profiles handlechange
 handleChange = event => {
   this.setState({ [event.target.id]: event.target.value})
 }
+
+//Blogs handle submit
 handleSubmit = event => {
   event.preventDefault()
   axios
@@ -33,6 +50,20 @@ handleSubmit = event => {
     })
   )
 }
+//Profiles handle submit
+  handleSubmit = event => {
+    event.preventDefault()
+    axios
+    .post('/profiles', this.state)
+    .then(response =>
+      this.setState(
+      {
+        profiles: response.data
+      })
+    )
+  }
+
+//Blogs delete blog
 deleteBlog = event => {
   axios.delete('/blogs/' + event.target.value)
   .then(response => {
@@ -41,6 +72,17 @@ deleteBlog = event => {
     })
   })
 }
+
+//Profiles delete profile
+deleteProfile = event => {
+  axios.delete('/profiles/' + event.target.value).then(response => {
+    this.setState({
+      profiles: response.data
+    })
+  })
+}
+
+//Blogs update blog
 updateBlog = (event) => {
   event.preventDefault()
   const id = event.target.id
@@ -50,6 +92,19 @@ updateBlog = (event) => {
       this.setState({
         blogs: response.data,
         title: '',
+      })
+    })
+}
+
+//Profiles update profile
+updateProfile = (event) => {
+  event.prevnetDefault()
+  const id = event.target.id
+  axios
+    .put('/blogs/' + id, this.state)
+    .then(response => {
+      this.setState({
+        profiles: response.data,
       })
     })
 }
@@ -125,78 +180,22 @@ updateBlog = (event) => {
                      >This is a bad blog
                      </button>
                 </details>
-            </li>
-          )})}
-          </ul>
-          <Profile username={this.state.profile.Username}></Profile>
+               </li>
+
+)})}
+</ul>
+<details>
+  <summary>Create User Profile</summary>
+<form onSubmit={this.handleSubmit}>
+  <label htmlFor="username">Username:</label>
+  <input type="text" id="title" onChange={this.handleChange}/>
+  <input type="submit" value="create profile user" />
+</form>
+</details>
+
         </div>
-    )
-  }
-}
-
-//Profile component in React ============================
-
-class Profiles extends React.Component {
-  state = {
-    username: '',
-    profiles: []
-  }
-  componentDidMount = () => {
-    axios.get('/blogs').then(response => {
-      this.setState({
-        profiles: response.data
-      })
-    })
-  }
-  handleChange = event => {
-    this.setState({ [event.target.id]: event.target.value})
-  }
-
-  handleSubmit = event => {
-    event.preventDefault()
-    axios
-    .post('/profiles', this.state)
-    .then(response =>
-      this.setState(
-      { username: '',
-        profiles: response.data
-      })
-    )
-  }
-  deleteProfile = event => {
-    axios.delete('/profiles/' + event.target.value).then(response => {
-      this.setState({
-        profiles: response.data
-      })
-    })
-  }
-  updateProfile = (event) => {
-    event.prevnetDefault()
-    const id = event.target.id
-    axios
-      .put('/blogs/' + id, this.state)
-      .then(response => {
-        this.setState({
-          profiles: response.data,
-          username: '',
-        })
-      })
-  }
-  render = () => {
-    return (
-      <div>
-        <details>
-          <summary>Create User Profile</summary>
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="username">Username:</label>
-          <input type="text" id="title" onChange={this.handleChange}/>
-          <input type="submit" value="create profile user" />
-        </form>
-        </details>
+      )}
       }
-      </div>
-
-
 ReactDOM.render(
   <App></App>,
   document.querySelector('main')
