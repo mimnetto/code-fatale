@@ -71,6 +71,7 @@ updateBlog = (event) => {
     return (
       <div>
           <Modal updateBlogs={this.updateBlogs} />
+          <SignUpForm updateBlogs={this.updateBlogs} />
           <h2 className="recent">Most Recent Blogs Posts </h2>
           <ul>
             {this.state.blogs.map(blog => { return (
@@ -187,6 +188,40 @@ class Modal extends React.Component {
     );
   }
 }
+
+class SignUpForm extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        username: '',
+        password: ''
+      };
+      this.handleChange = this.handleChange.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
+    }
+    handleChange(event) {
+      this.setState({value: event.target.value});
+    }
+    handleSubmit(event) {
+      alert('A signup was submitted: ' + this.state.value);
+      event.preventDefault();
+    }
+    render() {
+      return (
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            username:
+            <input type="text" value={this.username} onChange={this.handleChange} />
+          </label>
+          <label>
+            password:
+            <input type="text" value={this.password} onChange={this.handleChange} />
+          </label>
+          <input type="submit" value="Submit" />
+        </form>
+      );
+    }
+  }
 
 ReactDOM.render(
   <App></App>,
