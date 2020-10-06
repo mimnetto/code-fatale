@@ -94,5 +94,12 @@ module.exports = [
   post: 'Once upon a time I used to think that kiwi fruits were actually the birds. I had a hard time coping with the fact that I liked eating a green fruit that might have been the cutest pet to have walking around my house. I eventually put it together that while they share the same name they are not the same thing.' ,
   mood: 'Meh',
   img: 'https://i.imgur.com/aGTN4yi.jpg',
+  },
+
+  {
+  title: 'Hello, World'!,
+  post: 'ドドドドドドド' ,
+  mood: 'Meh',
+  img: 'https://i1.wp.com/nyunews.com/wp-content/uploads/2019/09/jojo_Youtube.png?fit=2871%2C1560&ssl=1',
   }
 ];
