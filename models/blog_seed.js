@@ -1,4 +1,4 @@
-module.exports = [
+blogSeed = [
   {
   title: 'HO～ほら行こうぜ',
   post: 'HOほらゆこうぜ
@@ -102,4 +102,6 @@ module.exports = [
   mood: 'Meh',
   img: 'https://i1.wp.com/nyunews.com/wp-content/uploads/2019/09/jojo_Youtube.png?fit=2871%2C1560&ssl=1',
   }
-];
+]
+
+module.exports = blogSeed
