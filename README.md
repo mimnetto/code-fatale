@@ -7,7 +7,7 @@
 * Lily Herreria
 
 # User Story
-- [x] As a user, I will be able to login
+- [x] As a user, I will be able to make and edit my post
 
 https://trello.com/b/J8GjWSDb/code-fatale
 
