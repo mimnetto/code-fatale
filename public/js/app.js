@@ -1,6 +1,3 @@
-import React from "react"
-import ReactPlayer from "react-player"
-
 class App extends React.Component {
   state = {
   title: '',
