@@ -14,7 +14,7 @@ class NameForm extends React.Component {
     }
     render() {
       return (
-        <form onSubmit={this.handleSubmit}>
+        <form action="/checklogged" method="POST" onSubmit={this.handleSubmit}>
           <label>
             username:
             <input type="text" value={this.state.value} onChange={this.handleChange} />
