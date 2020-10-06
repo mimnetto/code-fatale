@@ -203,12 +203,13 @@ class SignUpForm extends React.Component {
       this.setState({value: event.target.value});
     }
     handleSubmit(event) {
-      alert('A signup was submitted: ' + this.state.value);
+    (this.state.value);
       event.preventDefault();
+      console.log(this.state.username)
     }
     render() {
       return (
-        <form onSubmit={this.handleSubmit}>
+        <form action="/signup" method="POST" onSubmit={this.handleSubmit}>
           <label>
             username:
             <input type="text" value={this.username} onChange={this.handleChange} />
