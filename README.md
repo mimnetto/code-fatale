@@ -9,6 +9,8 @@
 # User Story
 - [x] As a user, I will be able to make and edit my post
 
+### Links 
+
 https://trello.com/b/J8GjWSDb/code-fatale
 
 ![ga](/public/img/gaLogo.png) <br>
