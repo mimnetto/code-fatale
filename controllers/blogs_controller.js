@@ -1,19 +1,10 @@
-const isAuthenticated = (req, res, next) => {
-    if (req.session.currentUser) {
-      return next()
-    } else {
-      res.redirect('/sessions/new')
-    }
-  }
-
-
 //==========
 //Dependencies
 //==========
   const express = require('express')
   const Blog = require('../models/blogs.js')
   const blogs = express.Router()
-  // const blogSeed = require('../models/blog_seed.js')
+    // const blogSeed = require('../models/blog_seed.js')
 
 
 //==========
@@ -38,37 +29,6 @@ const isAuthenticated = (req, res, next) => {
     })
   })
 
-//==========
-//GET Route
-//==========
-//Home
-blogs.get('/home', (req, res) => {
-      res.json(src/Home.jsx)
-  })
-
-//==========
-//GET Route
-//==========
-//Protected
-blogs.get('/protected', (req, res) => {
-  res.json(src/Protected.jsx)
-})
-
-//==========
-//GET Route
-//==========
-//Login
-blogs.get('/login', (req, res) => {
-  res.json(src/SignIn.jsx)
-})
-
-//==========
-//GET Route
-//==========
-//Callback
-blogs.get('/implicit/callback', (req, res) => {
-  res.redirect('/protected')
-})
 
 //==========
 //PUT Route
