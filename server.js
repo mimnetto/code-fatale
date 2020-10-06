@@ -4,7 +4,7 @@
 const express = require('express');
 const mongoose = require ('mongoose');
 const methodOverride  = require('method-override');
-
+const session = require('express-session')
 
 //___________________
 //Config
@@ -49,12 +49,29 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));// extended: false - does not allow nested objects in query strings
 app.use(express.json());// returns middleware that only parses JSON - may or may not need it depending on your project
 
+
 //use method override
 app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
+// app.use(
+//   session({
+//     secret: process.env.SECRET, //a random string
+//     resave: false,
+//     saveUninitialized: false
+//   })
+// )
+app.use(
+  session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: false})
+)
 //ROUTES
 const blogsController = require("./controllers/blogs_controller.js");
 app.use("/blogs", blogsController);
+const usersController = require("./controllers/users_controller.js");
+app.use("/home", usersController);
+
 
 
 //___________________
