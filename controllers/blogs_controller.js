@@ -4,7 +4,7 @@
   const express = require('express')
   const Blog = require('../models/blogs.js')
   const blogs = express.Router()
-    // const blogSeed = require('../models/blog_seed.js')
+  const blogSeed = require('../models/blog_seed.js')
 
 
 //==========
@@ -90,11 +90,11 @@
 //==========
 //SEED Route
 //==========
-// blogs.get('/seed', (req, res) => {
-//   Blog.insertMany(blogSeed, (err, manyBlogs) => {
-//     res.redirect('/')
-//   })
-// })
+blogs.get('/seed', (req, res) => {
+  Blog.insertMany(blogSeed, (err, manyBlogs) => {
+    res.redirect('/')
+  })
+})
 
 //==========
 //DROP Collection

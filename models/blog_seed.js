@@ -1,62 +1,7 @@
-module.exports = [
+blogSeed = [
   {
   title: 'HO～ほら行こうぜ',
-  post: 'HOほらゆこうぜ
-  そだみんなゆこうぜ
-  Sa hora uta ou ze
-  Souda minna uta ou ze
-  HO hora chika ou ze
-  そだみんなちかおうぜ
-  Sa ho ra ai souze
-  サイコウキュウデアイソウゼ
-  皆さん立って！内良がすむ
-  ミライデイズレッツゲットアップ（GET UP）
-  EVERYBODY SCREAM imi nai kedo
-  こんびにがすきはははは
-  ひさふりだせふるさとにわ
-  さりしゅう帰ろう（えろ！）
-  英会話スクウルハイッタキリ
-  イケテナイズハハハハ
-  HO hora yukou ze PEACE PEACE！
-  HO hora yukou ze PEACE PEACE！
-  戦記のひってうちじゃなぜか
-  投票投票外食スルンダ
-  行こう！ （LET'S GO！X 3 LET\'S ... PEACE！PEACE！）
-  スキなひとがやさしかった（PEACE！）
-  うれしいできごとが（うん！）ふえました（PEACE！PEACE！）
-  大事なひと（うん！）わかってくれた（PEACE！）
-  関道手なできごとと（うん！）成下
-  大丈夫です！
-  デリバリピ​​ザいつもなやむ
-  L ka M ka piza（ピザ！）
-  もりがりながでんわは
-  キリニクイネハハハハ
-  多数決じゃきめらんないのは
-  蓮愛のエトセトラ
-  行こう！ （LET'S GO！X 3 LET'S ... PEACE！PEACE！）
-  みちゆくひとがしんせつったった（PEACE！）
-  うれしいできごとが（うん！）ふえました（PEACE！PEACE！）
-  愛しい人がしょうじきでした
-  Subete o uke tomeyou to（Yeah！）神島下
-  大丈夫です！
-  青春ブタ野郎イチペジッテ
-  ちきゅうのれきしからする
-  ドレクライナンダロウ？
-  あひといあのひと
-  おひるごはんなにたべたんだろう？
-  HOほらゆこうぜ
-  そだみんなゆこうぜ
-  Sa hora uta ou ze
-  Souda minna uta ou ze
-  HO hora chika ou ze
-  そだみんなちかおうぜ
-  Sa hora ai souze
-  サイコウキュウデアイソウゼ
-  みちゆくひとがしんせつったった（PEACE！）
-  うれしいできごとが（うん！）ふえました（PEACE！PEACE！）
-  愛しい人がしょうじきでした
-  Subete o uke tomeyou to（Yeah！）神島下
-  大丈夫です！',
+  post: 'Delivery Pizza Always Troubles Me Large Or Medium? Pizza (Pizza!) When We Really Enjoy Long Phone Calls, So Hard To Hang Up, Yeah? HAHAHAHAHA',
   mood: '日本の誇り',
   img: 'https://s2.dmcdn.net/v/AOM0l1LZjN1OB0Rz-/x1080',
   },
@@ -97,9 +42,11 @@ module.exports = [
   },
 
   {
-  title: 'Hello, World'!,
+  title: 'Hello, World!',
   post: 'ドドドドドドド' ,
   mood: 'Meh',
   img: 'https://i1.wp.com/nyunews.com/wp-content/uploads/2019/09/jojo_Youtube.png?fit=2871%2C1560&ssl=1',
   }
-];
+]
+
+module.exports = blogSeed
