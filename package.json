@@ -19,10 +19,16 @@
   "homepage": "https://github.com/mimnetto/code-fatale#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.0",
+    "@okta/okta-auth-js": "^4.0.2",
+    "@okta/okta-react": "^3.0.7",
+    "bcrypt": "^5.0.0",
     "cores": "^0.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-session": "^1.17.1",
     "method-override": "^3.0.0",
-    "mongoose": "^5.10.7"
+    "mongoose": "^5.10.7",
+    "react": "^16.13.1",
+    "react-router-dom": "^5.2.0"
   }
 }
