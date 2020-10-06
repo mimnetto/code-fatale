@@ -104,6 +104,13 @@ summary {
   outline: none;
 }
 
+textarea#post {
+  outline: none;
+  min-height: fit-content;
+  padding: 10px 0 10px 10px;
+  font-size: 10pt;
+}
+
 summary::marker {
   background-color: #59B3A5;
 }
@@ -319,6 +326,14 @@ input.update-btn {
   border-radius: 15px;
 }
 
+input.post-btn {
+  background-color: #59B3A5 !important;
+  padding: 5px;
+  border-radius: 15px;
+  min-width: 100px;
+  margin-top: 25px;
+}
+
 form.edit-sum {
   margin-bottom: 35px;
   width: 100%;
@@ -350,4 +365,9 @@ td.feel {
 
 table {
   margin-bottom: 25px;
+}
+
+.edit-sum input::placeholder {
+  color: #926d6d !important;
+  font-size: 1.5em;
 }

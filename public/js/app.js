@@ -80,7 +80,6 @@ updateBlog = (event) => {
             <img className="lefti" src={blog.img} alt={blog.title}/>
             </a>
                <div className="view">
-                  <summary>Read Post</summary>
                   <table>
                     <tbody>
                       <tr>
@@ -102,41 +101,17 @@ updateBlog = (event) => {
                   <summary>Edit Post</summary>
                   <form id= {blog._id} onSubmit= {this.updateBlog}  className="edit-sum">
                     <label htmlFor="title">title:</label>
-                    <input
-                      type="text"
-                      id="title"
-                      onChange={this.handleChange}
-                      value={this.state.name}
-                    /> <br />
-                    <label htmlFor="post">post:</label>
-                    <input
-                      type="text"
-                      id="post"
-                      onChange={this.handleChange}
-                      value={this.state.name}
-                    /> <br />
-                    <label htmlFor="img">image:</label>
-                    <input
-                      type="text"
-                      id="img"
-                      onChange={this.handleChange}
-                      value={this.state.name}
-                    /> <br />
-                    <label htmlFor="mood">mood:</label>
-                    <input
-                      type="text"
-                      id="mood"
-                      onChange={this.handleChange}
-                      value={this.state.name}
-                    /> <br />
+                    <input type="text" id="title" onChange={this.handleChange} value={this.state.name} placeholder="New Title"  /> <br />
+                    <label htmlFor="mood">mood</label>
+                    <input type="text" id="mood" onChange={this.handleChange} value={this.state.name} placeholder="Did misinterpret your mood?" />
+                    <label htmlFor="post">post</label>
+                    <textarea type="text" id="post" onChange={this.handleChange} value={this.state.name} className="materialize-textarea">New Post</textarea> <br />
+                    <label htmlFor="img">image</label>
+                    <input type="text" id="img" onChange={this.handleChange} value={this.state.name} placeholder="http://new-image.jpg" /> <br />
                     <input className="update-btn right" type="submit" value="Update Blog" />
                     </form>
                     </details> <br />
-                    <button
-                     value= {blog._id}
-                     onClick= {this.deleteBlog}
-                     >This is a bad blog
-                     </button>
+                    <button value= {blog._id} onClick= {this.deleteBlog}> This is a bad </button>
             </li>
           )})}
           </ul>
@@ -199,8 +174,9 @@ class Modal extends React.Component {
           <label htmlFor="img">Image </label>
           <input placeholder="http://" type="text" id="img" onChange={this.handleChange}/>
           <br />
-          <input type="submit" onClick={this.toggle} value="Post!" />
+          <input type="submit" className="post-btn right" onClick={this.toggle} value="Post!" />
         </form>
+        <button onClick={this.toggle} className="left">Cancel</button>
       </div>
     </div>
     );
