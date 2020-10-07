@@ -189,8 +189,6 @@ class Modal extends React.Component {
   }
 }
 
-<<<<<<< HEAD
-=======
 class SignUpForm extends React.Component {
     constructor(props) {
       super(props);
@@ -226,7 +224,6 @@ class SignUpForm extends React.Component {
     }
   }
 
->>>>>>> 21c4925dcc1aac7348d69a90ce29bee58f984caa
 ReactDOM.render(
   <App></App>,
   document.querySelector('main')
