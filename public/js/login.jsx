@@ -1,7 +1,10 @@
 class NameForm extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {value: ''};
+      this.state = {
+         username: '',
+         password: ''
+            };
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -9,7 +12,8 @@ class NameForm extends React.Component {
       this.setState({value: event.target.value});
     }
     handleSubmit(event) {
-      alert('A login was submitted: ' + this.state.value);
+      event.target.reset()
+      alert('A login was submitted');
       event.preventDefault();
     }
     render() {
@@ -17,14 +21,19 @@ class NameForm extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             username:
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
+            <input type="text" value={this.username} onChange={this.handleChange} />
           </label>
           <label>
             password:
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
+            <input type="text" value={this.password} onChange={this.handleChange} />
           </label>
-          <input type="submit" value="Submit" />
+          <input type="submit" className="sign-btn modal-close" onClick={this.toggle} value="Submit" />
         </form>
       );
     }
   }
+
+  ReactDOM.render(
+    <NameForm></NameForm>,
+    document.querySelector('div#signin.modal-content')
+  )

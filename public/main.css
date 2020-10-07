@@ -85,12 +85,20 @@ h2.recent {
 }
 
 img.lefti {
-  width: 150px;
-  display: block;
+  width: auto;
+  max-height: 115px;
+  display: inline-block;
   margin: 15px;
   padding-left: 0;
   margin: 0;
   float: right;
+  border-radius: 4px;
+}
+img.centi{
+  width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 4px;
 }
 
@@ -152,7 +160,6 @@ li {
 }
 
 div.view {
-  width: 75%;
   margin-top: 10px;
   padding-left: 20px;
   font-family: tgn-soft-round, sans-serif;
@@ -297,6 +304,8 @@ p.centerpar {
   transform: translate(-50%, -50%);
 }
 
+
+
 .display-block {
   display: block;
 }
@@ -328,6 +337,13 @@ input.update-btn {
 }
 
 input.post-btn {
+  background-color: #59B3A5 !important;
+  padding: 5px;
+  border-radius: 15px;
+  min-width: 100px;
+  margin-top: 25px;
+}
+input.sign-btn {
   background-color: #59B3A5 !important;
   padding: 5px;
   border-radius: 15px;
@@ -371,4 +387,39 @@ table {
 .edit-sum input::placeholder {
   color: #926d6d !important;
   font-size: 1.5em;
+}
+
+/* sign up modal */
+
+h2.signup {
+  font-family: bc-alphapipe, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  font-size: 5vw;
+  margin-bottom: 0;
+  font-size: 4vw;
+  padding-top: 15px;
+}
+
+.modal-content {
+  position: fixed;
+  background: white;
+  border: 5px #59B3A5 solid;
+  width: 80%;
+  border-radius: 25px;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h2.close {
+  margin: 25px;
+}
+
+
+h5.title {
+  display: inline-block;
+  min-width: 75%;
 }

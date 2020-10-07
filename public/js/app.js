@@ -71,14 +71,14 @@ updateBlog = (event) => {
     return (
       <div>
           <Modal updateBlogs={this.updateBlogs} />
-          <SignUpForm updateBlogs={this.updateBlogs} />
           <h2 className="recent">Most Recent Blogs Posts </h2>
           <ul>
             {this.state.blogs.map(blog => { return (
             <li key={blog._id}>
-            <h5 className="title">{blog.title}</h5>
+            <h5 className="title valign-wrapper left-align">{blog.title}</h5>
             <a href={blog.img} target="_blank">
-            <img className="lefti" src={blog.img} alt={blog.title}/>
+            <img className="lefti show-on-large hide-on-small-only responsive-img" src={blog.img} alt={blog.title}/>
+            <img className="centi show-on-small hide-on-med-and-up responsive-img" src={blog.img} alt={blog.title}/>
             </a>
                <div className="view">
                   <table>
@@ -104,11 +104,11 @@ updateBlog = (event) => {
                     <label htmlFor="title">title:</label>
                     <input type="text" id="title" onChange={this.handleChange} value={this.state.name} placeholder="New Title"  /> <br />
                     <label htmlFor="mood">mood</label>
-                    <input type="text" id="mood" onChange={this.handleChange} value={this.state.name} placeholder="Did misinterpret your mood?" />
+                    <input type="text" id="mood" onChange={this.handleChange} value={this.state.mood} placeholder="Did you misinterpret your mood?" />
                     <label htmlFor="post">post</label>
-                    <textarea type="text" id="post" onChange={this.handleChange} value={this.state.name} className="materialize-textarea">New Post</textarea> <br />
+                    <textarea type="text" id="post" onChange={this.handleChange} value={this.state.post} className="materialize-textarea">New Post</textarea> <br />
                     <label htmlFor="img">image</label>
-                    <input type="text" id="img" onChange={this.handleChange} value={this.state.name} placeholder="http://new-image.jpg" /> <br />
+                    <input type="text" id="img" onChange={this.handleChange} value={this.state.img} placeholder="http://new-image.jpg" /> <br />
                     <input className="update-btn left" type="submit" value="Update Blog" />
                     </form>
                     </details> <br />
@@ -188,40 +188,6 @@ class Modal extends React.Component {
     );
   }
 }
-
-class SignUpForm extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        username: '',
-        password: ''
-      };
-      this.handleChange = this.handleChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
-    }
-    handleChange(event) {
-      this.setState({value: event.target.value});
-    }
-    handleSubmit(event) {
-      alert('A signup was submitted: ' + this.state.value);
-      event.preventDefault();
-    }
-    render() {
-      return (
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            username:
-            <input type="text" value={this.username} onChange={this.handleChange} />
-          </label>
-          <label>
-            password:
-            <input type="text" value={this.password} onChange={this.handleChange} />
-          </label>
-          <input type="submit" value="Submit" />
-        </form>
-      );
-    }
-  }
 
 ReactDOM.render(
   <App></App>,
