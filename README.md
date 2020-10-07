@@ -54,7 +54,9 @@
   * We made modals for our new blog posts and started on making them for sign in
 * Approaches
   * We wanted to make something with positive vibes!
+* Responsive Design
 * Add more
+  * blah blah
 
 
 ### Struggles
