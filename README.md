@@ -55,8 +55,8 @@
 * Approaches
   * We wanted to make something with positive vibes!
 * Responsive Design
-* Add more
-  * blah blah
+* Authorization
+  * We rendered a signup form.
 
 
 ### Struggles
@@ -64,7 +64,7 @@
 * Mimi
   *  The modals were much harder than I thought they would be, I think if I had another day or so to make them properly for the Auth components I would have had it working. But I at least got it working for the blog posts
 * Molly
-  *  Lorem Ipsum Dolor Sit Amet
+  *  The authorization was very difficult in React. I worked on it for days. First I mixed html files and was using auth notes from Unit 2, which wasn't working. Then I tried using Okta. Luckily, Karolin informed me that Okta would bring a user to its page, which wasn't the experience we would have wanted. I finally achieved some working code, and Mimi got a signup form to render, though we never achieved full functionality.
 * Lily
   *  Trying not to interfere with other's files they are working with while making progress on your own projects. I realized that two of the features I wanted to add relied on an earlier step being completed. There were a lot of things that tampered with files others were working with, for example while I could create the separate files for the profiles customization, most of the work had to be done in the app.js after the auth was done. I was advised by TA that I could not pre-code stuff in because it would continue to cause things to crash.
 
@@ -72,7 +72,7 @@
 ### Failed Attempts
 
 * Authorization
-  * Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
+  * We have some working code in that a login and sign up form do render to the page, but they don't link to a database.
 * Image Uploader
   * Mimi was able to get one to upload locally but not to the atlas db
 * Creating profile setting and customizations before the authorization. Apparently trying to make something out of order doesn't help. Lily would try to precode things but it would break the entire app so we had to ditch some code in order to get the app to work properly.
