@@ -13,6 +13,17 @@
 
 [trello](https://trello.com/b/J8GjWSDb/code-fatale)
 
+#### MVP - Minimum Viable Product
+
+- [x] A working full-stack application, built by you and your group members, using the MERN stack.
+- [x] Adhere to the **MVC** file structure: Models, Views, Controllers
+- [x] At least _one model_ with full **CRUD**.
+- [x] **Be deployed online** and accessible to the public via **Heroku**
+- [x] A git repository **not inside the class repo**.
+- [x] **daily tracker** [trello](https://trello.com/b/J8GjWSDb/code-fatale)
+- [x] **A `README.md` file** with explanations of the technologies used, the approach taken, unsolved problems, user stories, and notes.
+- [x] Have a **link to your hosted working app** in the **`README.md`** file in your github repo
+
 # User Story
 - [x] As a user, I will be able to make and edit my post
 
