@@ -19,10 +19,17 @@
 - [x] Adhere to the **MVC** file structure: Models, Views, Controllers
 - [x] At least _one model_ with full **CRUD**.
 - [x] **Be deployed online** and accessible to the public via **Heroku**
+- [x] Have two models
 - [x] A git repository **not inside the class repo**.
 - [x] **daily tracker** [trello](https://trello.com/b/J8GjWSDb/code-fatale)
 - [x] **A `README.md` file** with explanations of the technologies used, the approach taken, unsolved problems, user stories, and notes.
 - [x] Have a **link to your hosted working app** in the **`README.md`** file in your github repo
+
+#### Features
+
+- [x] Use a CSS framework Materialize
+- [x] Include User Stories
+- [x] Include **wireframes** that you designed during the planning process
 
 # User Story
 - [x] As a user, I will be able to make and edit my post
@@ -34,6 +41,44 @@
 ### Communication
 
 * [trello](https://trello.com/b/J8GjWSDb/code-fatale)
+
+## Technologies, Approaches, Fails and Wins
+
+### Tech & Approaches
+
+* Materialize
+  * We used Materialize framework
+* Custom css
+  * I used a lot of my own CSS but I feel it could have been better
+* Modals
+  * We made modals for our new blog posts and started on making them for sign in
+* Approaches
+  * We wanted to make something with positive vibes!
+* Add more
+
+
+### Struggles
+
+* Mimi
+  *  The modals were much harder than I thought they would be, I think if I had another day or so to make them properly for the Auth components I would have had it working. But I at least got it working for the blog posts
+* Molly
+  *  Lorem Ipsum Dolor Sit Amet
+* Lily
+  *  Lorem Ipsum Dolor Sit Amet
+
+
+### Failed Attempts
+
+* Authorization
+  * Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
+* Image Uploader
+  * Mimi was able to get one to upload locally but not to the atlas db
+
+
+### Wins!
+
+* We had very little conflicts with github
+* We worked great as a team!
 
 ## About
 

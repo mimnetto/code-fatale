@@ -189,6 +189,7 @@ class Modal extends React.Component {
   }
 }
 
+
 ReactDOM.render(
   <App></App>,
   document.querySelector('main')
