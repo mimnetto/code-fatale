@@ -189,6 +189,44 @@ class Modal extends React.Component {
   }
 }
 
+<<<<<<< HEAD
+=======
+class SignUpForm extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        username: '',
+        password: ''
+      };
+      this.handleChange = this.handleChange.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
+    }
+    handleChange(event) {
+      this.setState({value: event.target.value});
+    }
+    handleSubmit(event) {
+    (this.state.value);
+      event.preventDefault();
+      console.log(this.state.username)
+    }
+    render() {
+      return (
+        <form action="/signup" method="POST" onSubmit={this.handleSubmit}>
+          <label>
+            username:
+            <input type="text" value={this.username} onChange={this.handleChange} />
+          </label>
+          <label>
+            password:
+            <input type="text" value={this.password} onChange={this.handleChange} />
+          </label>
+          <input type="submit" value="Submit" />
+        </form>
+      );
+    }
+  }
+
+>>>>>>> 21c4925dcc1aac7348d69a90ce29bee58f984caa
 ReactDOM.render(
   <App></App>,
   document.querySelector('main')
