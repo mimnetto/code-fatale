@@ -66,7 +66,7 @@
 * Molly
   *  Lorem Ipsum Dolor Sit Amet
 * Lily
-  *  Lorem Ipsum Dolor Sit Amet
+  *  Trying not to interfere with other's files they are working with while making progress on your own projects. I realized that two of the features I wanted to add relied on an earlier step being completed. There were a lot of things that tampered with files others were working with, for example while I could create the separate files for the profiles customization, most of the work had to be done in the app.js after the auth was done. I was advised by TA that I could not pre-code stuff in because it would continue to cause things to crash.
 
 
 ### Failed Attempts
@@ -75,7 +75,7 @@
   * Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
 * Image Uploader
   * Mimi was able to get one to upload locally but not to the atlas db
-
+* Creating profile setting and customizations before the authorization. Apparently trying to make something out of order doesn't help. Lily would try to precode things but it would break the entire app so we had to ditch some code in order to get the app to work properly.
 
 ### Wins!
 
@@ -86,7 +86,7 @@
 
 This app, code-fatale shown as Ifatale  was modeled after a Nicklelodeon show ICarly. The intention is for a user to be able to sign up, login, and be able to post, edit, and delete on the blogs.
 
-React, is the main javascript library for building the user interface. Using full crud each of the blog posts are able to be manipulated independently show casing a picture, title, mood, post and a timestamp.  Materialized was for the css.
+React, is the main javascript library for building the user interface. Using full crud each of the blog posts are able to be manipulated independently displaying a picture, title, mood, post and a timestamp.  Materialized was for the css.
 
 Meetings were held regularly through discord and zoom and the project timeline was organized on a trello board so the minimum requirements could be met early so that stretch goals could be more accessible.
 
