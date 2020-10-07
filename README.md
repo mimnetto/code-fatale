@@ -32,7 +32,7 @@
 - [x] Include **wireframes** that you designed during the planning process
 
 # User Story
-- [x] As a user, I will be able to make and edit my post
+- [x]  User can post blogs with a title, mood, content, and an image. User cannot successfully login or sign up technically though we got very close to functionality.
 
 ### Heroku
 
