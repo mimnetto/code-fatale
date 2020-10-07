@@ -28,7 +28,7 @@
 #### Features
 
 - [x] Use a CSS framework Materialize
-- [x] Include User Stories
+- [x] User can post blogs with a title, mood, content, and an image. User cannot successfully login or sign up technically though we got very close to functionality.
 - [x] Include **wireframes** that you designed during the planning process
 
 # User Story
