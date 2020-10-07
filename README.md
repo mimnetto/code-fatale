@@ -81,6 +81,7 @@
 
 * We had very little conflicts with github
 * We worked great as a team!
+* We got to research a lot and learn a lot about features of react.
 
 ## About
 
