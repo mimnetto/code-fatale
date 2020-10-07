@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="utf-8">
-    <!-- for responsive design -->
+  <!-- for responsive design -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>iFatale</title>
   <link rel="stylesheet" href="main.css">
@@ -13,59 +14,62 @@
   <!-- font awesome -->
   <script src="https://use.fontawesome.com/25f44e1f85.js"></script>
 </head>
+
 <body>
-    <header>
-      <h5><a id="openModal" class="effect-shine waves-effect waves-light modal-trigger" href="#modal1">Login</a> | <a id="openModal" class="effect-shine waves-effect waves-light modal-trigger" href="#modal2">Sign Up</a></h5>
-      <div class="top">
-        <h2>iFatale</h2>
-        <h6>Blogs with Postive Vibes</h6>
-      </div>
-    </header>
-    <main>
-      <!-- react goes here -->
-    </main>
-    <section>
-    </section>
-    <footer>
-      <p class="made"> Made with <i class="fa fa-heart fa-sm"></i> by Mimi, Lily & Molly for General Assembly SEIR 810 Moss</p>
-    </footer>
-    <!-- Modal -->
-    <div id="modal1" class="modal">
-      <div class="modal-header">
-          <a href="#!" class="modal-close sign-btn right"><h2 class="close">X</h2></a>
+  <header>
+    <h5><a id="openModal" class="effect-shine waves-effect waves-light modal-trigger" href="#modal1">Login</a> | <a id="openModal" class="effect-shine waves-effect waves-light modal-trigger" href="#modal2">Sign Up</a></h5>
+    <div class="top">
+      <h2>iFatale</h2>
+      <h6>Blogs with Postive Vibes</h6>
+    </div>
+  </header>
+  <main>
+    <!-- react goes here -->
+  </main>
+  <section>
+  </section>
+  <footer>
+    <p class="made"> Made with <i class="fa fa-heart fa-sm"></i> by Mimi, Lily & Molly for General Assembly SEIR 810 Moss</p>
+  </footer>
+  <!-- Modal -->
+  <div id="modal1" class="modal">
+    <div class="modal-header">
+      <a href="#!" class="modal-close sign-btn right">
+        <h2 class="close">X</h2>
+      </a>
       <h2 class="signup"> Sign In!</h2>
       <div id="signin" class="modal-content">
         <!-- signinp form goes here -->
       </div>
     </div>
   </div>
-      <div id="modal2" class="modal">
-        <div class="modal-header">
-            <a href="#!" class="modal-close sign-btn right"><h2 class="close">X</h2></a>
-        <h2 class="signup">Sign Up!</h2>
-        <div id="signup" class="modal-content">
-          <!-- sign up form goes here -->
-        </div>
+  <div id="modal2" class="modal">
+    <div class="modal-header">
+      <a href="#!" class="modal-close sign-btn right">
+        <h2 class="close">X</h2>
+      </a>
+      <h2 class="signup">Sign Up!</h2>
+      <div id="signup" class="modal-content">
+        <!-- sign up form goes here -->
       </div>
     </div>
+  </div>
   <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   <script type="text/babel" src="js/app.js"></script>
-    <script type="text/babel" src="js/signup.jsx"></script>
-    <script type="text/babel" src="js/login.jsx"></script>
-    <script
-  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
-  crossorigin="anonymous"></script>
+  <script type="text/babel" src="js/signup.jsx"></script>
+  <script type="text/babel" src="js/login.jsx"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
   <!-- Compiled and minified JavaScript materialize -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script>
-  $(document).ready(function(){
+    $(document).ready(function() {
       $('.modal').modal();
     })
   </script>
 
 </body>
+
 </html>

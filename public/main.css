@@ -94,7 +94,8 @@ img.lefti {
   float: right;
   border-radius: 4px;
 }
-img.centi{
+
+img.centi {
   width: 100px;
   display: block;
   margin-left: auto;
@@ -304,8 +305,6 @@ p.centerpar {
   transform: translate(-50%, -50%);
 }
 
-
-
 .display-block {
   display: block;
 }
@@ -343,6 +342,7 @@ input.post-btn {
   min-width: 100px;
   margin-top: 25px;
 }
+
 input.sign-btn {
   background-color: #59B3A5 !important;
   padding: 5px;
@@ -390,7 +390,6 @@ table {
 }
 
 /* sign up modal */
-
 h2.signup {
   font-family: bc-alphapipe, sans-serif;
   font-weight: 700;
@@ -417,7 +416,6 @@ h2.signup {
 h2.close {
   margin: 25px;
 }
-
 
 h5.title {
   display: inline-block;
